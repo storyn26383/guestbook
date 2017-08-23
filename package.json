@@ -13,7 +13,19 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "latest"
+    "apollo-client": "^1.9.1",
+    "auth0-js": "^8.9.3",
+    "auth0-lock": "^10.19.0",
+    "dotenv-webpack": "^1.5.4",
+    "graphql-tag": "^2.4.2",
+    "js-cookie": "^2.1.4",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "nuxt": "latest",
+    "pug": "^2.0.0-rc.2",
+    "sass-loader": "^6.0.6",
+    "uuid": "^3.1.0",
+    "vue-apollo": "^2.1.0-beta.21"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

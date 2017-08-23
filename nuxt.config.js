@@ -1,3 +1,5 @@
+const Dotenv = require('dotenv-webpack')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -14,6 +16,18 @@ module.exports = {
     ]
   },
   /*
+  ** Styles of the page
+  */
+  css: [
+    'normalize.css'
+  ],
+  /*
+  ** Router
+  */
+  router: {
+    middleware: ['check-auth']
+  },
+  /*
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
@@ -21,11 +35,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLINT on save
-    */
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
+      /*
+      ** Run ESLINT on save
+      */
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -33,6 +47,9 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+
+      config.plugins.push(new Dotenv())
     }
-  }
+  },
+  plugins: ['~/plugins/Apollo/Provider.js']
 }
