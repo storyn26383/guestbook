@@ -19,7 +19,7 @@ module.exports = {
   ** Styles of the page
   */
   css: [
-    'normalize.css'
+    'vuetify/dist/vuetify.min.css'
   ],
   /*
   ** Router
@@ -35,6 +35,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: [
+      'vuetify'
+    ],
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
       /*
@@ -51,5 +54,8 @@ module.exports = {
       config.plugins.push(new Dotenv())
     }
   },
-  plugins: ['~/plugins/Apollo/Provider.js']
+  plugins: [
+    '~/plugins/Vuetify',
+    '~/plugins/Apollo/Provider'
+  ]
 }
