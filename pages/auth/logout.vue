@@ -1,5 +1,5 @@
 <template lang="pug">
-  .callback
+  .logout
     p Loading...
 </template>
 
@@ -7,6 +7,7 @@
   import Cookie from 'js-cookie'
 
   export default {
+    layout: 'blank',
     created () {
       Cookie.remove('auth0_id_token')
       Cookie.remove('auth0_access_token')

@@ -8,6 +8,7 @@
   import User from '~/plugins/GQL/User'
 
   export default {
+    layout: 'blank',
     async mounted () {
       let hash = {}
 

@@ -14,6 +14,7 @@
   import Logo from '~/components/Logo.vue'
 
   export default {
+    middleware: ['auth'],
     components: {
       Logo
     }
@@ -23,7 +24,7 @@
 <style lang="scss" scoped>
   section {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 64px);
     flex-direction: column;
 
     &, .cover {
