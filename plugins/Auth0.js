@@ -6,4 +6,8 @@ const CLIENT_ID = process.env.AUTH0_CLIENT_ID
 
 export const getLock = (options = {}) => new Auth0Lock(CLIENT_ID, DOMAIN, options)
 
-export const getWebAuth = () => new Auth0.WebAuth({ domain: DOMAIN, clientID: CLIENT_ID })
+export const getWebAuth = (options = {}) => new Auth0.WebAuth({
+  domain: DOMAIN,
+  clientID: CLIENT_ID,
+  ...options
+})

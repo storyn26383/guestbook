@@ -19,6 +19,7 @@ module.exports = {
   ** Styles of the page
   */
   css: [
+    'material-design-icons/iconfont/material-icons.css',
     'vuetify/dist/vuetify.min.css'
   ],
   /*
@@ -36,7 +37,8 @@ module.exports = {
   */
   build: {
     vendor: [
-      'vuetify'
+      'vuetify',
+      'vee-validate'
     ],
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
@@ -56,6 +58,7 @@ module.exports = {
   },
   plugins: [
     '~/plugins/Vuetify',
+    '~/plugins/VeeValidate',
     '~/plugins/Apollo/Provider'
   ]
 }
