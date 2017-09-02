@@ -2,7 +2,7 @@
   v-app
     v-container(fluid)
       v-toolbar.blue-grey.darken-2.white--text(dark, fixed)
-        v-toolbar-title Guestbook
+        v-toolbar-title Todo List
         v-spacer
         v-menu(offset-y, open-on-hover, v-if="auth")
           v-avatar.mr-3(slot="activator")
