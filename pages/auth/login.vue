@@ -1,6 +1,6 @@
 <template lang="pug">
-  v-layout.login(align-center, justify-center)
-    v-flex(xs12, sm6, md4, lg3, xl-2)
+  v-layout.login(row, align-center, justify-center)
+    v-flex(xs12, sm6, md4, lg3, xl2)
       v-card.mt-5
         v-toolbar.cyan.darken-2.white--text
           v-toolbar-title Login
